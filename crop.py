@@ -22,5 +22,5 @@ region = origin + (origin[0]+size[0], origin[1]+size[1])
 cropped_region = image.crop(region)
 cropped_image = Image.new("RGBA", size)
 cropped_image.paste(cropped_region, (0, 0))
-image_name = args.image.split(".")[0]+".png"
+image_name = args.image.split(".")[0]+"_cropped.png"
 cropped_image.save(image_name, "PNG")
